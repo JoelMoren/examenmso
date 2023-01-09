@@ -24,7 +24,10 @@ function iniciaSesion(){
     console.log(item.nombreusuario,item.claveacceso);
 
         if(usuario==item.nombreusuario && password==item.claveacceso){
-        localStorage.setItem("UsuarioLogueado", item.idusuario);
+        localStorage.setItem("idusuario", item.idusuario);
+        localStorage.setItem("nombreusuario", item.nombreusuario);
+        localStorage.setItem("correo", item.correo);
+        localStorage.setItem("claveacceso", item.claveacceso);
 
         location.href = "http://localhost:81/redsocial/principal.html";
 
