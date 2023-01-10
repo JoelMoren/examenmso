@@ -9,11 +9,11 @@ services:
     volumes:
       - ./blockstorage/postgres:/var/lib/postgresql/data
   discovery-server:
-    build: msoservicediscovery/
+    image: joerk/msoservicediscovery:1.0.0
     ports:
       - "8761:8761"
   monitor:
-    build: msomonitoreo/
+    image: joerk/msomonitoreo:1.0.0
     ports:
       - "8090:8090"
   rabbitmq:
@@ -22,7 +22,7 @@ services:
       - "15672:15672"
       - "5672:5672"
   mso-usuarios:
-    build: msousuarios/
+    image: joerk/msousuarios:1.0.0
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://red-social-postgres:5432/redsocial
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
@@ -34,7 +34,7 @@ services:
       - red-social-postgres
       - rabbitmq
   mso-publicaciones:
-    build: msopublicaciones/
+    image: joerk/msopublicaciones:1.0.0
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://red-social-postgres:5432/redsocial
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
@@ -46,7 +46,7 @@ services:
       - red-social-postgres
       - rabbitmq
   mso-mensajeria:
-    build: msomensajeria/
+    image: joerk/msomensajeria:1.0.0
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://red-social-postgres:5432/redsocial
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
@@ -58,7 +58,7 @@ services:
       - red-social-postgres
       - rabbitmq
   mso-front:
-    build: front/
+    image: joerk/msofront:1.0.0
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery-server:8761/eureka/
       - SPRING_RABBITMQ_HOST=rabbitmq
