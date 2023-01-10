@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "5538d1a4-63d0-4578-aa7f-10552e7b6463",
+		"name": "ExamenRedSocial",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "mso-usuarios",
+			"item": [
+				{
+					"name": "mostrar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/examen/mso/usuarios/mostrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"mso",
+								"usuarios",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \r\n            \"nombreusuario\": \"prueba\",\r\n            \"correo\": \"prueba@gmail.com\",\r\n            \"claveacceso\": \"123456\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/examen/mso/usuarios/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"mso",
+								"usuarios",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mostrar por id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/examen/mso/usuarios/mostrar/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"mso",
+								"usuarios",
+								"mostrar",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar por id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/examen/mso/usuarios/eliminar/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"mso",
+								"usuarios",
+								"eliminar",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registrar perfil",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \r\n            \"idusuario\": 3,\r\n            \"nombrecompleto\": \"Black Panter\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/examen/mso/perfil/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"mso",
+								"perfil",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mostrar perfil usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/examen/mso/perfil/mostrar/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"mso",
+								"perfil",
+								"mostrar",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "eliminar perfil usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/examen/mso/perfil/eliminar/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"mso",
+								"perfil",
+								"eliminar",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "muestra amigos de un usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/examen/mso/muestraamigos/usuario/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"mso",
+								"muestraamigos",
+								"usuario",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "alimina amigos de un usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/examen/mso/amigos/eliminar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"examen",
+								"mso",
+								"amigos",
+								"eliminar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mso-publicaciones",
+			"item": [
+				{
+					"name": "Registrar Publicacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \r\n            \"contenidopublicacion\": \"OtraPublicacionnnnnnnnn\",\r\n            \"fechapublicacion\": \"2023-01-08T18:26:44.620+00:00\",\r\n            \"idusuario\": 1\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8180/examen/publicaciones/mso/publicaciones/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"examen",
+								"publicaciones",
+								"mso",
+								"publicaciones",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar Publicacion Usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8180/examen/publicaciones/mso/publicaciones/usuario/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"examen",
+								"publicaciones",
+								"mso",
+								"publicaciones",
+								"usuario",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mostrar comentarios publicacion",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8180/examen/publicaciones/mso/comentarios/publicacion/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"examen",
+								"publicaciones",
+								"mso",
+								"comentarios",
+								"publicacion",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registrar comentario en publicacion",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \r\n            \"idpublicacion\": 1,\r\n            \"contenidocomentario\": \"Probando agregado de comentario a publicacion\",\r\n            \"fechacomentario\": \"2023-01-08T18:55:30.005+00:00\"\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8180/examen/publicaciones/mso/comentarios/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8180",
+							"path": [
+								"examen",
+								"publicaciones",
+								"mso",
+								"comentarios",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "mso-mensajeria",
+			"item": [
+				{
+					"name": "Registra Chat",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n            \r\n            \"idusuarioorigen\": 1,\r\n            \"idusuariodestino\": 7\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8280/examen/mensajeria/mso/chats/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examen",
+								"mensajeria",
+								"mso",
+								"chats",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mostrar chats usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8280/examen/mensajeria/mso/chats/mostrar/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examen",
+								"mensajeria",
+								"mso",
+								"chats",
+								"mostrar",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "elimina chat de un usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8280/examen/mensajeria/mso/chats/eliminar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examen",
+								"mensajeria",
+								"mso",
+								"chats",
+								"eliminar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registra un nuevo mensaje",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idchat\": 1,\r\n        \"fechahora\": \"2023-01-08T18:38:30.005+00:00\",\r\n        \"texto\": \"probando mensaje nuevo\",\r\n        \"visto\": false\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8280/examen/mensajeria/mso/mensajes/registrar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examen",
+								"mensajeria",
+								"mso",
+								"mensajes",
+								"registrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "muestra mensajes de un chat",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8280/examen/mensajeria/mso/mensajes/mostrar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examen",
+								"mensajeria",
+								"mso",
+								"mensajes",
+								"mostrar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "actualiza un mensaje",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"idmensaje\": 7,\r\n            \"idchat\": 1,\r\n            \"fechahora\": \"2023-01-08T18:38:30.005+00:00\",\r\n            \"texto\": \"probando mensaje nuevo\",\r\n            \"visto\": true\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8280/examen/mensajeria/mso/mensajes/actualiza",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examen",
+								"mensajeria",
+								"mso",
+								"mensajes",
+								"actualiza"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "elimina todos mensajes de chat",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8280/examen/mensajeria/mso/mensajes/eliminar/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8280",
+							"path": [
+								"examen",
+								"mensajeria",
+								"mso",
+								"mensajes",
+								"eliminar",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
